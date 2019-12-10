@@ -1,31 +1,23 @@
 import React from 'react';
+import ColorChanger from './components/ColorChanger';
+import Counter from './components/Counter';
 
-import './App.css';
-import allActions from './actions'
 
-import { useSelector, useDispatch } from "react-redux";
+
+
 
 function App() {
-  const counter = useSelector(state => state.counter);
-  console.log(counter)
-  const color = useSelector(state => state.color)
-  console.log(color)
-
-
-  const dispatch = useDispatch();
+  
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Counter : {counter}</h1>
-        <button onClick={() => dispatch(allActions.counterActions.increment())}>Increase Counter</button>
-        <button onClick={() => dispatch(allActions.counterActions.decrement())}>Decrease Counter</button>
-
-        <h1>Color : {color}</h1>
-
-        <button onClick={() => dispatch(allActions.colorActions.red())}>change to red color</button>
-        <button onClick={() => dispatch(allActions.colorActions.yellow())}>change to yellow color</button>
-      </header>
+    <div style={{
+      height:"100vh",
+      backgroundImage: " url('https://www.voyageavecnous.fr/wp-content/uploads/2015/01/plage-paradisiaque-maldives.jpg')",
+      backgroundSize: "100%"
+    }}>
+     <Counter/>
+     
+    <ColorChanger/>
     </div>
   );
 }
