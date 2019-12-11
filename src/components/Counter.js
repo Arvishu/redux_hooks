@@ -1,5 +1,6 @@
 import allActions from '../actions/';
 import React from 'react';
+import Button from '@material-ui/core/Button';
 
 import { useSelector, useDispatch } from "react-redux";
 
@@ -33,7 +34,8 @@ function Counter() {
             }}>
 
                 <h1>Counter : {counter}</h1>
-                <button onClick={() => dispatch(allActions.counterActions.increment())}
+                <Button variant="contained"
+                onClick={() => dispatch(allActions.counterActions.increment())}
                     style={{
                         width: "auto",
                         height: "auto",
@@ -46,8 +48,9 @@ function Counter() {
                         
                         
 
-                    }}>Increase Counter</button>
-                <button onClick={() => dispatch(allActions.counterActions.decrement())}
+                    }}>Increase Counter</Button>
+                <Button variant="contained"
+                onClick={() => dispatch(allActions.counterActions.decrement())}
                     style={{
                         width: "auto",
                         height: "auto",
@@ -58,7 +61,7 @@ function Counter() {
                         borderRadius: "5px",
                         fontSize:"1.5vw",
 
-                    }}>Decrease Counter</button>
+                    }}>Decrease Counter</Button>
 
 
             </div>

@@ -1,5 +1,6 @@
 import allActions from '../actions';
 import React from 'react';
+import Button from '@material-ui/core/Button';
 
 import { useSelector, useDispatch } from "react-redux";
 
@@ -38,7 +39,8 @@ function ColorChanger() {
          
           <h1>Color : {color.colorName}</h1>
           
-          <button onClick={() => dispatch(allActions.colorActions.red())}
+          <Button variant="contained"
+          onClick={() => dispatch(allActions.colorActions.red())}
            style={{
             backgroundColor: color.compColor,
             color: "white",
@@ -48,9 +50,10 @@ function ColorChanger() {
             fontSize:"1.5vw",
           
           }}
-            >change to<br/> Chi-gong red</button>
+            >change to<br/> Chi-gong red</Button>
 
-          <button onClick={() => dispatch(allActions.colorActions.yellow())}
+          <Button variant="contained"
+          onClick={() => dispatch(allActions.colorActions.yellow())}
           style={{
             backgroundColor: color.compColor,
             color: "white",
@@ -59,7 +62,7 @@ function ColorChanger() {
             borderRadius:"5px",
             fontSize:"1.5vw",
           }}
-            >change to Sour<br/> lemon yellow</button>
+            >change to Sour<br/> lemon yellow</Button>
 
         </div>
      

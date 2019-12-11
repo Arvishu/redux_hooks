@@ -1,10 +1,15 @@
 import React from 'react';
+import 'typeface-roboto';
 import ColorChanger from './components/ColorChanger';
 import Counter from './components/Counter';
+import Calendar from './components/Calendar';
+import Navbar from './components/Navbar';
 
 
 
-import { useSelector} from "react-redux";
+
+
+import { useSelector } from "react-redux";
 
 
 function App() {
@@ -12,25 +17,38 @@ function App() {
 
   return (
     <div style={{
-      display: "flex",
-      alignItems: "center",
-      margin: "auto auto",
-      height: "100vh",
-      backgroundPosition:"center",
+
+
+      backgroundPosition: "center",
       backgroundImage: color.background,
       backgroundSize: "cover",
-      fontSize:"1.5vw",
+      fontSize: "1.5vw",
 
     }}>
-
+      <Navbar />
+      <Calendar />
       <div style={{
-        display: "inlineBlock",
-        verticalAlign: "middle",
-        margin: "auto"
-      }}>
-        <Counter />
+        display: "flex",
+        alignItems: "center",
+        margin: "auto auto",
+        height: "175vh",
+        fontSize: "1.5vw",
 
-        <ColorChanger />
+      }}>
+
+        <div style={{
+          display: "inlineBlock",
+          verticalAlign: "middle",
+          margin: "auto"
+        }}>
+
+
+
+
+          <Counter />
+
+          <ColorChanger />
+        </div>
       </div>
     </div>
   );

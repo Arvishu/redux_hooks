@@ -1,6 +1,6 @@
 import background from './../resources/shifaaz-shamoon-sLAk1guBG90-unsplash.jpg'
-import background2 from './../resources/kayla-kozlowski-ECQ-3QXThAA-unsplash.jpg'
-import background3 from './../resources/godslar-zboO0K1WfY4-unsplash.jpg'
+import background3 from './../resources/kayla-kozlowski-ECQ-3QXThAA-unsplash.jpg'
+import background2 from './../resources/godslar-zboO0K1WfY4-unsplash.jpg'
 
 const color = (state = {
     colorName: 'Robbins egg blue',
