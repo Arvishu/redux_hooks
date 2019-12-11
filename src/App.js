@@ -4,20 +4,34 @@ import Counter from './components/Counter';
 
 
 
+import { useSelector} from "react-redux";
 
 
 function App() {
-  
+  const color = useSelector(state => state.color)
 
   return (
     <div style={{
-      height:"100vh",
-      backgroundImage: " url('https://www.voyageavecnous.fr/wp-content/uploads/2015/01/plage-paradisiaque-maldives.jpg')",
-      backgroundSize: "100%"
+      display: "flex",
+      alignItems: "center",
+      margin: "auto auto",
+      height: "100vh",
+      backgroundPosition:"center",
+      backgroundImage: color.background,
+      backgroundSize: "cover",
+      fontSize:"1.5vw",
+
     }}>
-     <Counter/>
-     
-    <ColorChanger/>
+
+      <div style={{
+        display: "inlineBlock",
+        verticalAlign: "middle",
+        margin: "auto"
+      }}>
+        <Counter />
+
+        <ColorChanger />
+      </div>
     </div>
   );
 }

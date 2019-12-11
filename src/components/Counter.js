@@ -13,15 +13,16 @@ function Counter() {
                 backgroundColor: color.color,
                 color: color.compColor,
                 textAlign: "center",
-                height: "33vh",
                 width: "40vw",
+                height: "20vw",
                 display: "flex",
                 alignItems: "center",
-                margin: "10px auto auto",
-                borderRadius: "35px 10px",
+                margin: "auto auto",
+                padding:"10px",
+                borderRadius: "1500px 1500px 10px 10px",
                 border: "10px ridge",
-                opacity:"0.8"
-
+                opacity: "0.8",
+                
             }}>
 
 
@@ -34,20 +35,29 @@ function Counter() {
                 <h1>Counter : {counter}</h1>
                 <button onClick={() => dispatch(allActions.counterActions.increment())}
                     style={{
+                        width: "auto",
+                        height: "auto",
                         backgroundColor: color.compColor,
                         color: "white",
-                        padding:"5px",
-                        margin:"5px",
-                        borderRadius:"5px"
+                        padding: "5px",
+                        margin: "5px",
+                        borderRadius: "5px",
+                        fontSize:"1.5vw",
+                        
+                        
+
                     }}>Increase Counter</button>
                 <button onClick={() => dispatch(allActions.counterActions.decrement())}
                     style={{
+                        width: "auto",
+                        height: "auto",
                         backgroundColor: color.compColor,
                         color: "white",
-                        padding:"5px",
-                        margin:"5px",
-                        borderRadius:"5px"
-                       
+                        padding: "5px",
+                        margin: "5px",
+                        borderRadius: "5px",
+                        fontSize:"1.5vw",
+
                     }}>Decrease Counter</button>
 
 

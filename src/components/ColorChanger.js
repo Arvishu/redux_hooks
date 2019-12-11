@@ -6,8 +6,7 @@ import { useSelector, useDispatch } from "react-redux";
 function ColorChanger() {
   
   const color = useSelector(state => state.color)
-  const colorName = useSelector(state => state.colorName)
-
+ 
 
   const dispatch = useDispatch();
 
@@ -17,13 +16,13 @@ function ColorChanger() {
       backgroundColor: color.color,
       color: color.compColor,
       textAlign: "center",
-      height:"33vh",
-      width:"40vw",
+      width: "40vw",
+      height:"20vw",
       display: "flex",
       alignItems: "center",
       margin:"10px auto auto",
-      borderRadius:"10px 35px",
-      border:"5px solid",
+      padding:"10px",
+      borderRadius:"10px 10px 1000px 1000px",
       border: "10px ridge",
       opacity:"0.8"
       
@@ -45,14 +44,23 @@ function ColorChanger() {
             color: "white",
             padding:"5px",
             margin:"5px",
-            borderRadius:"5px"}}>change to Chi-gong red</button>
+            borderRadius:"5px",
+            fontSize:"1.5vw",
+          
+          }}
+            >change to<br/> Chi-gong red</button>
+
           <button onClick={() => dispatch(allActions.colorActions.yellow())}
           style={{
             backgroundColor: color.compColor,
             color: "white",
             padding:"5px",
             margin:"5px",
-            borderRadius:"5px"}}>change to Sour lemon yellow</button>
+            borderRadius:"5px",
+            fontSize:"1.5vw",
+          }}
+            >change to Sour<br/> lemon yellow</button>
+
         </div>
      
     </div>
